@@ -1,0 +1,52 @@
+  
+    <table class="border-spacing-4 border border-slate-400">
+      <thead class="text-left text-[0.8125rem] leading-6 text-zinc-500">
+        <tr>
+          <th class="border border-slate-300">Name</th>
+          <th class="border border-slate-300">Age</th>
+          <th class="border border-slate-300">Title</th>
+       </tr>
+      </thead>
+      <tbody>
+       <%= for user <- @users do %>
+         <tr>
+             <td class="border border-slate-300"><%= user.name %> </td>
+             <td class="border border-slate-300"><%= user.age %> </td>
+             <td class="border border-slate-300"><%= user.title %> </td>
+        </tr>
+       <% end %>
+    </tbody>
+    </table>
+
+
+
+
+<%!-- <.header>
+Listing Users
+<:actions>
+  <.link href={~p"/users/new"}>
+    <.button>New User</.button>
+  </.link>
+</:actions>
+</.header>
+
+<.table id="users" rows={@users} row_click={&JS.navigate(~p"/users/#{&1}")}>
+<:col :let={user} label="Name"><%= user.name %></:col>
+<:col :let={user} label="Age"><%= user.age %></:col>
+<:col :let={user} label="Title"><%= user.title %></:col>
+<:action :let={user}>
+  <div class="sr-only">
+    <.link navigate={~p"/users/#{user}"}>Show</.link>
+  </div>
+  <.link navigate={~p"/users/#{user}/edit"}>Edit</.link>
+</:action>
+<:action :let={user}>
+  <.link href={~p"/users/#{user}"} method="delete" data-confirm="Are you sure?">
+    Delete
+  </.link>
+</:action>
+</.table>
+
+
+
+ --%>
